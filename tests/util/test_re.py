@@ -1,4 +1,4 @@
-"""tea_tool.util.re 预编译正则常量的单元测试。
+"""teatool.util.re 预编译正则常量的单元测试。
 
 用例以整串匹配（fullmatch）验证各模式的边界断言与结构约束：模式都带
 lookbehind/lookahead，fullmatch 下能表达"独立成串"的目标语义。自由文本
@@ -9,7 +9,7 @@ import re
 
 import pytest
 
-from tea_tool.util.re import (
+from teatool.util.re import (
     BANK_CARD_RE_PATTERN,
     EMAIL_RE_PATTERN,
     ID_CARD_RE_PATTERN,

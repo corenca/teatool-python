@@ -1,8 +1,8 @@
-"""tea_tool.util.enum 值枚举基类的单元测试。"""
+"""teatool.util.enum 值枚举基类的单元测试。"""
 
 import pytest
 
-from tea_tool.util.enum import ValueMsgEnum
+from teatool.util.enum import ValueMsgEnum
 
 
 class OrderStatus(ValueMsgEnum):

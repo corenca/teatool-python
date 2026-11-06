@@ -179,7 +179,7 @@ def parse_datetime(text: str, fmt: str, tz: tzinfo | None = None) -> datetime:
 
     Args:
         text: 待解析的时间字符串。
-        fmt: strptime 格式化模板，可复用 tea_tool.datetime.formatter 常量。
+        fmt: strptime 格式化模板，可复用 teatool.datetime.formatter 常量。
         tz: attach 目标时区，缺省为系统本地时区；模板含 %z 时无效。
 
     Returns:
@@ -188,7 +188,7 @@ def parse_datetime(text: str, fmt: str, tz: tzinfo | None = None) -> datetime:
     Raises:
         ValueError: 当 text 与 fmt 不匹配时（strptime 原生异常）。
     """
-    parsed = datetime.strptime(text, fmt)  # noqa: DTZ007 解析结果 naive 时后续按 tz 参数 attach 时区
+    parsed = datetime.strptime(text, fmt)  # 解析结果 naive 时，后续按 tz 参数补时区
     if parsed.tzinfo is not None:
         return parsed
     return parsed.replace(tzinfo=tz if tz is not None else local_tz())

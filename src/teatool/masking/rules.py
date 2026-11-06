@@ -6,7 +6,7 @@ MaskRule 将"识别（matcher）"与"处理（策略）"绑定为一条完整规
 级），供编排层做重叠消解后替换。依赖方向（MaskRule → MaskMatch、
 MaskRule → Matcher）均为单向，因此本模块无需延迟注解求值。
 
-模型直接继承 pydantic.BaseModel（不经过 tea_tool.schema.BaseModel）：规则
+模型直接继承 pydantic.BaseModel（不经过 teatool.schema.BaseModel）：规则
 值对象需要的是"不可变 + 拒绝未声明字段"而非 ORM 数据模型的宽松配置——
 规则字段拼错应显式报错，避免脱敏静默失效。
 """

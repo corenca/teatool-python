@@ -14,8 +14,8 @@ matchers 模块的机制纯净。
 
 本模块不自动生效，须显式传入 Masker::
 
-    from tea_tool.masking import Masker
-    from tea_tool.masking.presets import CN_PII_RULES
+    from teatool.masking import Masker
+    from teatool.masking.presets import CN_PII_RULES
 
     masker = Masker(rules=CN_PII_RULES)
 
@@ -34,9 +34,9 @@ matchers 模块的机制纯净。
   前缀形态）可能被误判为固话。
 """
 
-from tea_tool.masking import KeepStrategy, MaskRule, RegexMatcher, TextMatch
-from tea_tool.util.luhn import is_luhn_valid
-from tea_tool.util.re import (
+from teatool.masking import KeepStrategy, MaskRule, RegexMatcher, TextMatch
+from teatool.util.luhn import is_luhn_valid
+from teatool.util.re import (
     BANK_CARD_RE_PATTERN,
     EMAIL_RE_PATTERN,
     ID_CARD_RE_PATTERN,

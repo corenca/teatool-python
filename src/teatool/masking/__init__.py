@@ -6,8 +6,8 @@
 
 典型用法（业务侧全局定义一次后复用）::
 
-    from tea_tool.masking import Masker, KeepStrategy
-    from tea_tool.masking.presets import CN_PII_RULES
+    from teatool.masking import Masker, KeepStrategy
+    from teatool.masking.presets import CN_PII_RULES
 
     phone_mask = KeepStrategy(prefix=3, suffix=4)
     masker = Masker(rules=CN_PII_RULES)

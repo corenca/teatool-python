@@ -1,9 +1,9 @@
-"""tea_tool.schema 数据模型基类与字段别名的单元测试。"""
+"""teatool.schema 数据模型基类与字段别名的单元测试。"""
 
 from datetime import UTC, date, datetime, timedelta, timezone
 
-from tea_tool.datetime.formatter import DATE_TIME_FORMAT
-from tea_tool.schema import BaseModel, DateField, DateTimeField, LocalDateTimeField
+from teatool.datetime.formatter import DATE_TIME_FORMAT
+from teatool.schema import BaseModel, DateField, DateTimeField, LocalDateTimeField
 
 
 class DateTimeModel(BaseModel):
@@ -26,7 +26,7 @@ class TestLocalDateTimeField:
     def test_naive_keeps_original_value(self) -> None:
         """naive 输入按原值格式化，与 DateTimeField 输出一致。"""
         # 刻意构造 naive 时间以覆盖 naive 序列化路径
-        naive = datetime(2026, 9, 4, 18, 30, 45)  # noqa: DTZ001
+        naive = datetime(2026, 9, 4, 18, 30, 45)
         raw = RawModel(plain=naive, local=naive, d=date(2026, 9, 4))
         payload = raw.model_dump_json()
         assert f'"plain":"{naive.strftime(DATE_TIME_FORMAT)}"' in payload

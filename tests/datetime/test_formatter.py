@@ -1,9 +1,8 @@
-# ruff: noqa: DTZ001, DTZ007
-"""tea_tool.datetime.formatter 格式化模板常量的单元测试。"""
+"""teatool.datetime.formatter 格式化模板常量的单元测试。"""
 
 from datetime import datetime, timedelta, timezone
 
-from tea_tool.datetime.formatter import (
+from teatool.datetime.formatter import (
     DATE_TIME_FORMAT_CN,
     DATE_TIME_ISO,
     DATE_TIME_ISO_ZONE,

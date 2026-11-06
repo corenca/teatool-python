@@ -4,7 +4,7 @@ Python 工具库（"Python tool box"，v0.1.0）。由 uv 管理，src 布局，
 
 ## 项目现状
 
-- `src/tea_tool/` — 包根（已含 `py.typed`，属于 PEP 561 类型标注分发库，代码需带完整类型标注）
+- `src/teatool/` — 包根（已含 `py.typed`，属于 PEP 561 类型标注分发库，代码需带完整类型标注）
   - `util/` — 通用工具（当前唯一有内容的模块：`util/collection.py`，含切分函数）
   - `django/`、`storage/` — 空包骨架，计划放置 Django / 对象存储相关工具
 - dev 依赖含 ruff 与 pytest（`uv add --dev` 添加）；无 CI、无 typecheck 配置，别假设存在

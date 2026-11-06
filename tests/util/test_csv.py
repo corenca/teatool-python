@@ -1,11 +1,11 @@
-"""tea_tool.util.csv 读写 CSV 与 polars DataFrame 互转的单元测试。"""
+"""teatool.util.csv 读写 CSV 与 polars DataFrame 互转的单元测试。"""
 
 from pathlib import Path
 
 import polars as pl
 import pytest
 
-from tea_tool.util.csv import csv_to_df, df_to_csv
+from teatool.util.csv import csv_to_df, df_to_csv
 
 
 def _write_fixture(tmp_path: Path, content: str) -> str:

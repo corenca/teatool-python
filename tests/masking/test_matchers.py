@@ -1,11 +1,11 @@
-"""tea_tool.masking.matchers 识别器层的单元测试。"""
+"""teatool.masking.matchers 识别器层的单元测试。"""
 
 import re
 from dataclasses import FrozenInstanceError
 
 import pytest
 
-from tea_tool.masking.matchers import Matcher, RegexMatcher, TextMatch
+from teatool.masking.matchers import Matcher, RegexMatcher, TextMatch
 
 DIGITS = r"\d+"
 

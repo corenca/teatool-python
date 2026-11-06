@@ -1,9 +1,8 @@
-# ruff: noqa: DTZ005
-"""tea_tool.datetime.timezone 时区常量与本地时区获取的单元测试。"""
+"""teatool.datetime.timezone 时区常量与本地时区获取的单元测试。"""
 
 from datetime import datetime, timedelta
 
-from tea_tool.datetime.timezone import (
+from teatool.datetime.timezone import (
     LOS_ANGELES,
     NEW_YORK,
     SHANGHAI,

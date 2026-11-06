@@ -1,8 +1,8 @@
-"""tea_tool.util.luhn Luhn 校验算法的单元测试。"""
+"""teatool.util.luhn Luhn 校验算法的单元测试。"""
 
 import pytest
 
-from tea_tool.util.luhn import is_luhn_valid
+from teatool.util.luhn import is_luhn_valid
 
 
 @pytest.mark.parametrize(

@@ -1,8 +1,8 @@
-"""tea_tool.util.collection 切分工具的单元测试。"""
+"""teatool.util.collection 切分工具的单元测试。"""
 
 import pytest
 
-from tea_tool.util.collection import chunk_list, chunk_range, split_list, split_range
+from teatool.util.collection import chunk_list, chunk_range, split_list, split_range
 
 
 @pytest.mark.parametrize(

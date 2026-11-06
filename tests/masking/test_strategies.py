@@ -1,8 +1,8 @@
-"""tea_tool.masking.strategies 脱敏策略的单元测试。"""
+"""teatool.masking.strategies 脱敏策略的单元测试。"""
 
 import pytest
 
-from tea_tool.masking import HashStrategy, KeepStrategy, RemoveStrategy, ReplaceStrategy
+from teatool.masking import HashStrategy, KeepStrategy, RemoveStrategy, ReplaceStrategy
 
 # 各测试共用的典型策略：手机号保留 3+4。
 PHONE_MASK = KeepStrategy(prefix=3, suffix=4)

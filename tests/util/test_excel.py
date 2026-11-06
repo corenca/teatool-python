@@ -1,4 +1,4 @@
-"""tea_tool.util.excel 读写 .xlsx 与 polars DataFrame 互转的单元测试。"""
+"""teatool.util.excel 读写 .xlsx 与 polars DataFrame 互转的单元测试。"""
 
 from datetime import date, datetime
 from pathlib import Path
@@ -7,7 +7,7 @@ import polars as pl
 import pytest
 import xlsxwriter
 
-from tea_tool.util.excel import df_to_excel, excel_to_df
+from teatool.util.excel import df_to_excel, excel_to_df
 
 
 def _make_xlsx(path: Path, sheet_rows: dict[str, list[list]]) -> None:
@@ -212,7 +212,7 @@ def test_excel_to_df_missing_fastexcel_raises(
     path = tmp_path / "book.xlsx"
     _make_xlsx(path, {"数据": [["id"], [1]]})
     monkeypatch.setattr(
-        "tea_tool.util.excel.importlib.util.find_spec", lambda name: None
+        "teatool.util.excel.importlib.util.find_spec", lambda name: None
     )
     with pytest.raises(ImportError, match="tea-tool\\[excel\\]"):
         excel_to_df(path, columns=["id"])
@@ -223,7 +223,7 @@ def test_df_to_excel_missing_xlsxwriter_raises(
 ) -> None:
     """缺少 xlsxwriter 时抛出带安装指引的 ImportError。"""
     monkeypatch.setattr(
-        "tea_tool.util.excel.importlib.util.find_spec", lambda name: None
+        "teatool.util.excel.importlib.util.find_spec", lambda name: None
     )
     with pytest.raises(ImportError, match="tea-tool\\[excel\\]"):
         df_to_excel(pl.DataFrame({"a": [1]}), tmp_path / "out.xlsx")
@@ -275,7 +275,7 @@ def test_df_to_excel_empty_frame_roundtrip(tmp_path: Path) -> None:
 
 def test_df_to_excel_datetime_roundtrip(tmp_path: Path) -> None:
     """时间列写出读回后时间点保持一致（单位归一后比较）。"""
-    ts = datetime(2024, 1, 2, 3, 4, 5)  # noqa: DTZ001 测试刻意使用 naive 时间
+    ts = datetime(2024, 1, 2, 3, 4, 5)  # 测试刻意使用 naive 时间
     df = pl.DataFrame({"ts": [ts, None], "id": [1, 2]})
     path = tmp_path / "out.xlsx"
     df_to_excel(df, path)

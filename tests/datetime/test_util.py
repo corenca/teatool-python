@@ -1,17 +1,16 @@
-# ruff: noqa: DTZ001
-"""tea_tool.datetime.util 日历域日期工具函数的单元测试。"""
+"""teatool.datetime.util 日历域日期工具函数的单元测试。"""
 
 from datetime import date, datetime, timedelta
 
 import pytest
 
-from tea_tool.datetime.formatter import (
+from teatool.datetime.formatter import (
     DATE_TIME_FORMAT,
     DATE_TIME_ISO_ZONE,
     DATE_TIME_MICROSECOND,
 )
-from tea_tool.datetime.timezone import NEW_YORK, SHANGHAI, UTC, local_tz
-from tea_tool.datetime.util import (
+from teatool.datetime.timezone import NEW_YORK, SHANGHAI, UTC, local_tz
+from teatool.datetime.util import (
     get_day_range,
     get_day_start,
     get_days_in_month,

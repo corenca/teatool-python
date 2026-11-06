@@ -2,7 +2,7 @@
 
 常量覆盖 UTC 及主流业务城市的 IANA 时区（UTC-12 ~ UTC+14 各主要时区带），
 命名统一全大写、多词下划线分隔，可直接作为 tzinfo 参数传入 datetime 相关
-构造与 tea_tool.datetime.util 各函数。依赖 zoneinfo（Python 3.9+ 内置），
+构造与 teatool.datetime.util 各函数。依赖 zoneinfo（Python 3.9+ 内置），
 具体时区数据取自已安装的 tzdata。
 """
 

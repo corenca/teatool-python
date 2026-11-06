@@ -2,7 +2,7 @@
 
 Masker 只持有使用方注入的规则列表，不含内置规则与类型注册表——何种文本
 是敏感信息、各类数据脱成什么样，均由使用方显式定义：可选用
-tea_tool.masking.presets 的预置规则，或在业务侧建立脱敏配置常量后复用
+teatool.masking.presets 的预置规则，或在业务侧建立脱敏配置常量后复用
 同一实例（如项目配置文件中的模块级 Masker）。
 """
 
@@ -30,7 +30,7 @@ class Masker:
 
     用法示例（文本自动识别，规则来自预置集）::
 
-        from tea_tool.masking.presets import CN_PII_RULES
+        from teatool.masking.presets import CN_PII_RULES
 
         masker = Masker(rules=CN_PII_RULES)
         masker.mask_text("联系 13812345678")  # 联系 ***********

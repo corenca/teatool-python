@@ -1,13 +1,13 @@
-"""tea_tool.masking.rules 规则模型与文本命中的单元测试。"""
+"""teatool.masking.rules 规则模型与文本命中的单元测试。"""
 
 import re
 
 import pytest
 from pydantic import ValidationError
 
-from tea_tool.masking import KeepStrategy, Masker, MaskMatch, MaskRule
-from tea_tool.masking.matchers import RegexMatcher, TextMatch
-from tea_tool.masking.presets import ID_CARD_RULE, PHONE_RULE
+from teatool.masking import KeepStrategy, Masker, MaskMatch, MaskRule
+from teatool.masking.matchers import RegexMatcher, TextMatch
+from teatool.masking.presets import ID_CARD_RULE, PHONE_RULE
 
 # matcher 字段可接受的三种输入形式：正则字符串、预编译 Pattern、识别器实例。
 MatcherInput = str | re.Pattern[str] | RegexMatcher

@@ -1,10 +1,10 @@
-"""tea_tool.masking.core Masker 脱敏入口的单元测试。"""
+"""teatool.masking.core Masker 脱敏入口的单元测试。"""
 
 from collections import namedtuple
 
 import pytest
 
-from tea_tool.masking import (
+from teatool.masking import (
     KeepStrategy,
     Masker,
     MaskRule,
@@ -12,7 +12,7 @@ from tea_tool.masking import (
     RemoveStrategy,
     ReplaceStrategy,
 )
-from tea_tool.masking.presets import CN_PII_RULES, PHONE_RULE
+from teatool.masking.presets import CN_PII_RULES, PHONE_RULE
 
 # 各测试共用的典型策略：手机号保留 3+4。
 PHONE_MASK = KeepStrategy(prefix=3, suffix=4)

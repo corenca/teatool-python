@@ -1,7 +1,7 @@
-"""tea_tool.masking.presets 预置规则集的单元测试。"""
+"""teatool.masking.presets 预置规则集的单元测试。"""
 
-from tea_tool.masking import KeepStrategy, MaskRule, RegexMatcher
-from tea_tool.masking.presets import (
+from teatool.masking import KeepStrategy, MaskRule, RegexMatcher
+from teatool.masking.presets import (
     BANK_CARD_RULE,
     CN_PII_RULES,
     EMAIL_RULE,
