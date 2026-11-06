@@ -5,8 +5,8 @@
 
 依赖：fastexcel（读取引擎）与 xlsxwriter（写出引擎），需安装 excel 可选依赖：
 
-- pip: pip install 'tea-tool[excel]'
-- uv: uv add 'tea-tool[excel]'
+- pip: pip install 'teatool[excel]'
+- uv: uv add 'teatool[excel]'
 
 缺失依赖时调用对应功能会抛出带安装指引的 ImportError。
 """
@@ -56,13 +56,13 @@ def _ensure_installed(*packages: str) -> None:
         packages: 需要确认已安装的依赖包名。
 
     Raises:
-        ImportError: 任一依赖包缺失时，提示安装 tea-tool[excel]。
+        ImportError: 任一依赖包缺失时，提示安装 teatool[excel]。
     """
     missing = [p for p in packages if importlib.util.find_spec(p) is None]
     if missing:
         raise ImportError(
             f"使用该功能需要安装 excel 可选依赖（缺少 {', '.join(missing)}），"
-            "安装方式：pip install 'tea-tool[excel]' 或 uv add 'tea-tool[excel]'"
+            "安装方式：pip install 'teatool[excel]' 或 uv add 'teatool[excel]'"
         )
 
 

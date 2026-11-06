@@ -214,7 +214,7 @@ def test_excel_to_df_missing_fastexcel_raises(
     monkeypatch.setattr(
         "teatool.util.excel.importlib.util.find_spec", lambda name: None
     )
-    with pytest.raises(ImportError, match="tea-tool\\[excel\\]"):
+    with pytest.raises(ImportError, match="teatool\\[excel\\]"):
         excel_to_df(path, columns=["id"])
 
 
@@ -225,7 +225,7 @@ def test_df_to_excel_missing_xlsxwriter_raises(
     monkeypatch.setattr(
         "teatool.util.excel.importlib.util.find_spec", lambda name: None
     )
-    with pytest.raises(ImportError, match="tea-tool\\[excel\\]"):
+    with pytest.raises(ImportError, match="teatool\\[excel\\]"):
         df_to_excel(pl.DataFrame({"a": [1]}), tmp_path / "out.xlsx")
 
 

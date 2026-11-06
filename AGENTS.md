@@ -1,4 +1,4 @@
-# tea-tool
+# teatool
 
 Python 工具库（"Python tool box"，v0.1.0）。由 uv 管理，src 布局，Python >= 3.12，作者 Corenca。
 

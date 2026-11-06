@@ -1,4 +1,4 @@
-# tea-tool
+# teatool
 
 Commonly used Python development toolkits in business development.
 
@@ -23,20 +23,20 @@ Commonly used Python development toolkits in business development.
 
 ```bash
 # pip
-pip install tea-tool
+pip install teatool
 ```
 
 ```bash
 # uv
-uv add tea-tool
+uv add teatool
 ```
 
 Excel 读写（`util.excel`）依赖可选的 fastexcel 与 xlsxwriter，按需安装：
 
 ```bash
-pip install 'tea-tool[excel]'
+pip install 'teatool[excel]'
 # 或
-uv add 'tea-tool[excel]'
+uv add 'teatool[excel]'
 ```
 
 未安装可选依赖时，调用对应读写函数会抛出带安装指引的 ImportError，指引信息同时给出 pip 与 uv 两种安装方式。
